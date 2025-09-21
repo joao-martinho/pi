@@ -1,3 +1,5 @@
+# Gustavo Guerreiro e João Souza
+
 import numpy as np
 from sklearn.cluster import MeanShift
 import cv2
@@ -68,4 +70,4 @@ def process_image(path, bandwidth=17, crop_fraction=(0.0, 1.0, 0.0, 1.0)):
     return new_img
 
 # Exemplo de uso: pega toda a imagem
-new_img = process_image('./dataset_neutrofilos/neutrofilo00.png', bandwidth=17)
+new_img = process_image('./dataset_neutrofilos/neutrofilo06.png', bandwidth=17)

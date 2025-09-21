@@ -1,8 +1,10 @@
+# Gustavo Guerreiro e João Souza
+
 import matplotlib.pyplot as plt
 import cv2
 import numpy as np
 
-img = cv2.imread('./dataset_neutrofilos/neutrofilo00.png')
+img = cv2.imread('./dataset_neutrofilos/neutrofilo06.png')
 img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)  # converte para RGB para matplotlib
 
 Z = img.reshape((-1, 3))
