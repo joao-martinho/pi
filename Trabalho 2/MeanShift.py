@@ -1,4 +1,4 @@
-# Gustavo Guerreiro e João Souza
+# Gustavo Guerreiro e João Martinho
 
 import numpy as np
 from sklearn.cluster import MeanShift

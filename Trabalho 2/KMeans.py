@@ -1,4 +1,4 @@
-# Gustavo Guerreiro e João Souza
+# Gustavo Guerreiro e João Martinho
 
 import matplotlib.pyplot as plt
 import cv2
