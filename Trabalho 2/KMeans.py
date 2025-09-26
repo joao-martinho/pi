@@ -5,7 +5,7 @@ import cv2
 import numpy as np
 
 img = cv2.imread('./dataset_neutrofilos/neutrofilo06.png')
-img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)  # converte para RGB para matplotlib
+img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 
 Z = img.reshape((-1, 3))
 Z = np.float32(Z)
@@ -19,5 +19,5 @@ res = center[label.flatten()]
 res2 = res.reshape((img.shape))
 
 plt.imshow(res2)
-plt.axis('off')  # opcional: remove eixos
+plt.axis('off')
 plt.show()

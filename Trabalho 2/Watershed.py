@@ -62,4 +62,4 @@ def segmentar_nucleos(imagem_path):
 
 # Exemplo de uso
 # Altere 'caminho/para/imagem.jpg' para o caminho da sua imagem do dataset
-segmentar_nucleos('caminho/para/imagem.jpg')
+segmentar_nucleos('dataset_neutrofilos/neutrofilo06.png')
