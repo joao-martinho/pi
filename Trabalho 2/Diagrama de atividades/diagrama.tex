@@ -1,0 +1,80 @@
+\documentclass{article}
+
+\title{Trabalho parcial 02: diagrama de atividades}
+\author{Gustavo Guerreiro, João Martinho}
+\date{1º de outubro de 2025}
+
+\setlength{\oddsidemargin}{-0.5cm}
+\setlength{\evensidemargin}{-0.5cm}
+\setlength{\textwidth}{17cm}
+\setlength{\topmargin}{-1.5cm}
+\setlength{\textheight}{24cm}
+
+\begin{document}
+
+\maketitle
+
+\section{Resumo}
+
+O nosso trabalho usa técnicas clássicas de pré-processamento e segmentação para distinguir e contar os núcleos celulares dos neutrófilos da base de imagens fornecida. A \textit{pipeline} do processamento consiste em:
+\begin{itemize}
+    \item Isolamento da célula:
+    \begin{itemize}
+        \item conversão da imagem original para escala de cinza;
+        \item limiarização para distinguir a região celular do fundo;
+        \item remoção do fundo, mantendo apenas a célula visível.
+    \end{itemize}
+    \item Segmentação do núcelo:
+    \begin{itemize}
+        \item aplicação de um novo limiar para isolar o núcleo do citoplasma;
+        \item obtenção da imagem binária com os núcleos evidenciados.
+    \end{itemize}
+\end{itemize}
+
+\section{Tabelas}
+
+Abaixo estão duas tabelas mostrando a quantidade de núcleos encontradas pela nossa solução em cada imagem. A primeira tabela mostra os resultados obtidos com os linfócitos (3 imagems), e a segunda, com os neutrófilos (10 imagens).
+
+\begin{table}[h]
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tabular}{|c|c|}
+\hline
+\multicolumn{2}{|c|}{Linfócitos} \\
+\hline
+linfocito00.png & 3 \\
+linfocito01.png & 2 \\
+linfocito02.png & 4 \\
+\hline
+\end{tabular}
+\end{minipage}
+\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tabular}{|c|c|}
+\hline
+\multicolumn{2}{|c|}{Neutrófilos} \\
+\hline
+neutrofilo00.png & 4 \\
+neutrofilo01.png & 3 \\
+neutrofilo02.png & 2 \\
+neutrofilo03.png & 4 \\
+neutrofilo04.png & 3 \\
+neutrofilo05.png & 2 \\
+neutrofilo06.png & 4 \\
+neutrofilo07.png & 3 \\
+neutrofilo08.png & 2 \\
+neutrofilo09.png & 4 \\
+\hline
+\end{tabular}
+\end{minipage}
+\end{table}
+
+\section{Isolamento das células}
+
+Inicialmente, importamos as bibliotecas necessárias, nomeadamento o OpenCV, o NumPy e o Matplotlib, responsáveis, respectivamente, pelas operações de visão computacional, manipulação numérica e visualização gráfica.
+
+Considerando que as imagens têm fundo escuro e o citoplasma e núcleos das células estão em tons de púrpura, aplicamos um limiar para converter o fundo branco em preto, isolando a célula no processo. Como o citplasma é mais claro que os núcleos, pode-se aplicar um segundo limiar para separá-los sem que o fundo atrapalhe o processo. O resultado desta etapa pode ser visto abaixo.
+
+\end{document}
